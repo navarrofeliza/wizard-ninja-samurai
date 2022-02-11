@@ -10,10 +10,10 @@ namespace wizard_ninja_samurai
         {
             base.Attack(target);
             int dexterityAttack = Dexterity * 5;
-            target.Dexterity -= dexterityAttack;
-            Console.WriteLine($"{target.Name}'s dexterity was reduced by {dexterityAttack}! It's now {target.Dexterity}!");
+            target.Health -= dexterityAttack;
+            Console.WriteLine($"{target.Name}'s health was reduced by {dexterityAttack}! It's now {target.Health}!");
             Random randInt = new Random();
-            if(randInt.Next(1,6) == 1)
+            if (randInt.Next(1, 6) == 1)
             {
                 target.Health -= 10;
                 Console.WriteLine($"{Name} dealt 10 additional damage!");
